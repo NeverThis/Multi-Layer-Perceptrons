@@ -20,24 +20,12 @@ Quick, for 100 points: What was the fundamental limitation of a perceptron? Yes,
 
 But how do we go about this? Well... it looks like it’s time to dust off our Boolean algebra! Our perceptrons are still stuck with simple algebraic operations, but luckily, XOR can be expressed using just those:
 
-A \oplus B = (A \lor B) \land \neg(A \land B)
+$A \oplus B = (A \lor B) \land \neg(A \land B)$
 
 Now we just need to reuse the weights and biases our perceptrons learned last time (or, you know, spend a minute or two thinking about solutions):
-
-OR:
-[
-1*x_1 + 1*x_2 - 0.5 \ge 0
-]
-
-AND:
-[
-1*x_1 + 1*x_2 - 1.5 \ge 0
-]
-
-NAND:
-[
--1*x_1 - 1*x_2 + 1.5 \ge 0
-]
+* **OR:** $1*x_1 + 1*x_2 - 0.5 \ge 0$
+* **AND:** $1*x_1 + 1*x_2 - 1.5 \ge 0$
+* **NAND:** $-1*x_1 - 1*x_2 + 1.5 \ge 0$
 
 > [!NOTE]
 > You should now be able to follow the Python code included in this repository.
@@ -54,4 +42,4 @@ Unfortunately, our trusty Heaviside activation function gets in the way. We can 
 
 Sure, we could try random changes or educated guesses, but training like this would be a bit like throwing darts in the dark. Which is why we need a different approach. That approach involves the sigmoid function I mentioned last time. But we'll get into that next time.
 
-One last thing, though: This problem had researchers scratching their heads for quite a while. If knowing whether our neural network guessed right or wrong doesn't help during training, then perhaps we don't need to bother with knowing the target answer at all. This is where unsupervised learning moved into the spotlight. Hebb's learning rule, for example, relied purely on associations: Ff two features kept cropping up together, the network would simply strengthen the connection between those neurons. But we're getting of track...
+One last thing, though: This problem had researchers scratching their heads for quite a while. If knowing whether our neural network guessed right or wrong doesn't help during training, then perhaps we don't need to bother with knowing the target answer at all. This is where unsupervised learning moved into the spotlight. Hebb's learning rule, for example, relied purely on associations: If two features kept cropping up together, the network would simply strengthen the connection between those neurons. But we're getting of track...
