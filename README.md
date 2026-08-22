@@ -23,9 +23,10 @@ But how do we go about this? Well... it looks like it’s time to dust off our B
 $A \oplus B = (A \lor B) \land \neg(A \land B)$
 
 Now we just need to reuse the weights and biases our perceptrons learned last time (or, you know, spend a minute or two thinking about solutions):
-* **OR:** $1*x_1 + 1*x_2 - 0.5 \ge 0$
-* **AND:** $1*x_1 + 1*x_2 - 1.5 \ge 0$
-* **NAND:** $-1*x_1 - 1*x_2 + 1.5 \ge 0$
+
+* **OR:** $1 * x_1 + 1 * x_2 - 0.5 \ge 0$
+* **AND:** $1 * x_1 + 1 * x_2 - 1.5 \ge 0$
+* **NAND:** $-1 * x_1 - 1 * x_2 + 1.5 \ge 0$
 
 > [!NOTE]
 > You should now be able to follow the Python code included in this repository.
